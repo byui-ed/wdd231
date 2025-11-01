@@ -1,0 +1,16 @@
+/* Additional styles for larger screens */
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #222;
+  color: #fff;
+}
+
+/* other styles as needed for layout and aesthetics */
