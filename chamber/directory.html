@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory | Cross River Chamber of Commerce</title>
+    <meta name="description" content="Official directory of members for the Cross River Chamber of Commerce.">
+    <meta name="author" content="Your Full Name">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="Directory | Cross River Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yourwebsite.com/chamber/images/social-share-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com/chamber/directory.html">
+    <meta property="og:description" content="Official directory of members for the Cross River Chamber of Commerce, Nigeria.">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <img src="images/crscoc.png" alt="Otu Godwin profile" width="200" height="100">
+            <span class="logo-icon">C</span>
+            <h1>Cross River Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+        <div class="dark-mode-toggle">
+             <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </header>
+
+    <main class="directory-main">
+        <h2>Member Directory</h2>
+        
+        <div class="view-toggle">
+            <button id="grid-view" title="Toggle Grid View">Grid View</button>
+            <button id="list-view" title="Toggle List View">List View</button>
+        </div>
+
+        <section id="member-display" class="grid"></section>
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <h3>Cross River Chamber of Commerce</h3>
+            <p>4 Allman Street, Calabar</p>
+            <p>Cross River State</p>
+            <p>Email: <a href="otuotu020@gmail.com">otuotu020@gmail.com</a></p>
+            <p>Phone: (+234) 8164033261</p>
+        </div>
+
+        <div class="footer-social">
+            <a href="#" aria-label="YouTube"><img src="images/youtube.png" alt="YouTube Icon"></a>
+            <a href="#" aria-label="Twitter"><img src="images/twitter.png" alt="Twitter Icon"></a>
+            <a href="#" aria-label="LinkedIn"><img src="images/linkedinn.png" alt="LinkedIn Icon"></a>
+        </div>
+
+        <div class="footer-dev-info">
+            <p>WDD 231 Class Project</p>
+            <p>**Otu Godwin Otu**</p>
+            <p>&copy;<span id="current-year"></span> Cross River Chamber of Commerce</p>
+            <p>Last Modification: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+{
+    "members": [
+        {
+            "name": "Sahara Solar Energy",
+            "address": "42 Oasis Rd, Timbuktu",
+            "phone": "(223) 555-1001",
+            "website": "https://saharasolar.com",
+            "imagefile": "sahara-solar.webp",
+            "membershiplevel": 3,
+            "otherinfo": "Providing sustainable energy solutions to the region."
+        },
+        {
+            "name": "Desert Sands Tours",
+            "address": "15 Camel Market St",
+            "phone": "(223) 555-1002",
+            "website": "https://desertsandtours.org",
+            "imagefile": "desert-tours.webp",
+            "membershiplevel": 2,
+            "otherinfo": "Guided tours and historical expeditions."
+        },
+        {
+            "name": "Mali Merchant Bank",
+            "address": "99 Finance Square",
+            "phone": "(223) 555-1003",
+            "website": "https://malimerchantbank.net",
+            "imagefile": "mali-bank.webp",
+            "membershiplevel": 3,
+            "otherinfo": "Full-service commercial and investment banking."
+        },
+        {
+            "name": "Ancient Manuscript Restoration",
+            "address": "3 Rue De La Paix",
+            "phone": "(223) 555-1004",
+            "website": "https://ancientrestoration.com",
+            "imagefile": "manuscript-restore.webp",
+            "membershiplevel": 1,
+            "otherinfo": "Preserving Timbuktu's priceless historical documents."
+        },
+        {
+            "name": "The Spice Road Cafe",
+            "address": "22 Bazaar Alley",
+            "phone": "(223) 555-1005",
+            "website": "https://spiceroadcafe.net",
+            "imagefile": "spice-cafe.webp",
+            "membershiplevel": 2,
+            "otherinfo": "Authentic regional cuisine and hospitality."
+        },
+        {
+            "name": "Timbuktu Local Grocer",
+            "address": "78 Market Plaza",
+            "phone": "(223) 555-1006",
+            "website": "https://timbuktugrocer.com",
+            "imagefile": "local-grocer.webp",
+            "membershiplevel": 1,
+            "otherinfo": "Fresh produce and local goods store."
+        },
+        {
+            "name": "Golden Star Construction",
+            "address": "1 Industrial Park",
+            "phone": "(223) 555-1007",
+            "website": "https://goldenstarbuild.com",
+            "imagefile": "golden-star.webp",
+            "membershiplevel": 3,
+            "otherinfo": "Commercial and residential building development."
+        }
+    ]
+}
+

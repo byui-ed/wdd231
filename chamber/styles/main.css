@@ -1,0 +1,271 @@
+/* --- CSS Imports/Normalize --- */
+/* Assuming normalize.css is linked first */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* --- Variable Definitions (Color Scheme Placeholder) --- */
+:root {
+    --primary-color: #334455;   /* Dark Slate Blue */
+    --secondary-color: #f7b32b; /* Gold/Accent */
+    --text-color: #333;
+    --background-color: #fff;
+    --card-background: #fcfcfc;
+    --footer-bg: #222;
+    --footer-text: #eee;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.5;
+    margin: 0;
+    min-width: 320px;
+}
+
+/* --- 1. Header & Navigation Styles (Based on Wireframe) --- */
+header {
+    background-color: var(--background-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-icon {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+header h1 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Hidden by default on mobile, controlled by JS */
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Adjust based on header height */
+    right: 0;
+    background-color: var(--background-color);
+    border: 1px solid #ddd;
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+}
+
+.navigation li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.navigation li a:hover, .navigation li a.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* JS will toggle this class */
+.navigation.open {
+    display: flex;
+}
+
+/* Placeholder for dark mode switch styling */
+.dark-mode-toggle {
+    margin-left: 1rem;
+}
+
+main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Directory Toggle and Base Styles --- */
+.view-toggle {
+    text-align: right;
+    margin: 1rem 0;
+}
+
+.view-toggle button {
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    border: none;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    border-radius: 5px;
+}
+
+/* --- 2. Member Display - GRID View --- */
+#member-display.grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile default */
+    gap: 1.5rem;
+}
+
+.member-card {
+    background-color: var(--card-background);
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.member-card:hover {
+    transform: translateY(-3px);
+}
+
+.member-card img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.member-card h3 {
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+}
+
+/* --- 3. Member Display - LIST View --- */
+#member-display.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.member-card.list-item {
+    display: grid;
+    /* Columns: (Image/Placeholder) | Name/Details | Level/Website */
+    grid-template-columns: 1fr 3fr 1fr; 
+    align-items: center;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid #eee;
+    border-left: 5px solid var(--primary-color);
+}
+
+.member-card.list-item img {
+    /* Hide image by default in mobile list view for a cleaner look */
+    display: none; 
+}
+
+/* --- 4. Footer Styles (Based on Wireframe) --- */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.footer-contact h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--secondary-color);
+}
+
+.footer-contact p, .footer-dev-info p {
+    margin: 0.2rem 0;
+}
+
+.footer-contact a {
+    color: var(--footer-text);
+}
+
+.footer-social img {
+    width: 30px;
+    margin: 0 0.5rem;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (min-width: 550px) {
+    /* Tablet/Medium Screens */
+    
+    /* Header/Nav Adjustments */
+    .navigation {
+        position: static;
+        flex-direction: row;
+        display: flex;
+        width: auto;
+        border: none;
+    }
+
+    #menu-toggle {
+        display: none; /* Hide toggle on larger screens */
+    }
+
+    /* Grid View on Tablet */
+    #member-display.grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* List View on Tablet */
+    .member-card.list-item {
+        grid-template-columns: 1fr 3fr 1fr; 
+    }
+}
+
+@media (min-width: 900px) {
+    /* Desktop/Wide Screens */
+    
+    /* Grid View on Desktop */
+    #member-display.grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Footer Layout */
+    footer {
+        grid-template-columns: 2fr 1fr 2fr; /* Contact | Social | Dev Info */
+        text-align: left;
+        align-items: center;
+    }
+    
+    .footer-social {
+        text-align: center;
+    }
+
+    /* List View on Desktop */
+    .member-card.list-item img {
+        display: block; /* Show image in list view */
+        width: 50px;
+        height: 50px;
+    }
+
+    .member-card.list-item {
+        grid-template-columns: 60px 4fr 2fr; 
+    }
+}
+
