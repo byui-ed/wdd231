@@ -101,3 +101,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set default view on load
     setView('grid'); 
 });
+
+
+// Display the current date in the header
+const datefield = document.getElementById('current-date');
+const now = new Date();
+const fulldate = new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(now);
+datefield.textContent = fulldate;
+
+// Display the last modified date in the footer
+document.getElementById('last-modified').textContent = document.lastModified;
+
+// Display current year in the footer
+document.getElementById('current-year').textContent = now.getFullYear();
+
+// Hamburger Menu Toggle (Example Basic Functionality)
+const nav = document.getElementById('primary-nav');
+const menuButton = document.getElementById('hamburger-menu');
+
+menuButton.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    menuButton.textContent = nav.classList.contains('open') ? 'X Close' : '☰ Menu';
+});
+
+// Optionally, add logic for banner/alert messages here
