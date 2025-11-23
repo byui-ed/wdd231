@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Timbuktu Chamber</title>
+    <meta name="description" content="Thank you for your membership application!">
+    <meta name="author" content="Your Full Name">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        </header>
+
+    <main class="thankyou-main">
+        <section class="confirmation-box">
+            <h2>🎉 Thank You for Joining!</h2>
+            <p>Your application has been successfully submitted to the Cross River Chamber of Commerce.</p>
+            <p>A representative will review your application and contact you via email shortly.</p>
+            
+            <hr>
+
+            <h3>Application Details Submitted:</h3>
+            <div id="application-details">
+                <p>Loading...</p>
+            </div>
+            
+            <p class="return-home"><a href="index.html">Return to the Home Page</a></p>
+        </section>
+    </main>
+
+    <footer>
+        </footer>
+
+    <script>
+        const displayFormInfo = () => {
+            const params = new URLSearchParams(window.location.search);
+            const detailsDiv = document.getElementById('application-details');
+            
+            // Required fields to display
+            const fields = {
+                'fname': "First Name",
+                'lname': "Last Name",
+                'email': "Email",
+                'phone': "Mobile Phone",
+                'orgname': "Business/Organization Name",
+                'timestamp': "Application Date/Time"
+            };
+
+            let htmlContent = '';
+            for (const key in fields) {
+                const value = params.get(key);
+                if (value) {
+                    htmlContent += `<p><strong>${fields[key]}:</strong> ${value}</p>`;
+                }
+            }
+
+            detailsDiv.innerHTML = htmlContent;
+        };
+
+        window.onload = displayFormInfo;
+    </script>
+</body>
+</html>

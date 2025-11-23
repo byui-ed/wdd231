@@ -429,3 +429,189 @@ footer {
         grid-template-columns: 1fr 1fr 1fr; /* Maintain 3 columns */
     }
 }
+
+
+
+/* --- ... (Existing CSS: Variables, Header, Navigation, Footer, etc.) ... --- */
+
+/* --- JOIN PAGE STYLES --- */
+.join-content-container {
+    display: block; /* Default stacked layout for small screens */
+}
+
+.chamber-form {
+    background-color: var(--card-background);
+    border: 1px solid #ddd;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.chamber-form fieldset {
+    margin-bottom: 2rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.chamber-form legend {
+    color: var(--primary-color);
+    padding: 0 0.5rem;
+    font-weight: bold;
+}
+
+.chamber-form label.top {
+    display: block;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.chamber-form label.top input, 
+.chamber-form label.top textarea,
+.chamber-form select {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 0.2rem;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Pattern visual feedback for organizational title field */
+#orgtitle:valid {
+    border-left: 5px solid green;
+}
+
+#orgtitle:invalid:not(:focus):not(:placeholder-shown) {
+    border-left: 5px solid red;
+}
+
+.submit-button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: darken(var(--secondary-color), 10%); /* conceptual darkener */
+}
+
+/* --- Membership Cards Layout --- */
+.membership-cards {
+    padding: 1rem 0;
+}
+
+.membership-cards h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on small/medium screens */
+    gap: 1rem;
+}
+
+.mem-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    background-color: #fff;
+    opacity: 0; /* Required for initial animation */
+    transform: translateY(20px); /* Required for initial animation */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.mem-card h4 {
+    margin-top: 0;
+}
+
+.mem-card a {
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* Initial Display Animation */
+.card-grid .mem-card {
+    /* Delay the start of each card's animation */
+    animation: fadeInSlideUp 0.8s ease-out forwards;
+}
+
+.card-1 { animation-delay: 0.1s; }
+.card-2 { animation-delay: 0.3s; }
+.card-3 { animation-delay: 0.5s; }
+.card-4 { animation-delay: 0.7s; }
+
+@keyframes fadeInSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- MODAL STYLES (Simple implementation using CSS :target) --- */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 100;
+}
+
+.modal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+}
+
+
+/* --- Media Queries for Responsive Layout --- */
+@media (min-width: 800px) {
+    .join-content-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* Form on left, cards on right */
+        gap: 2rem;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr; /* Stack cards vertically on large screens */
+    }
+}

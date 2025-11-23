@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Cross River Chamber | Application</title>
+    <meta name="description" content="Apply for membership with the Cross River Chamber of Commerce.">
+    <meta name="author" content="Your Full Name">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        </header>
+
+    <main class="join-main">
+        <h2>Chamber Membership Application</h2>
+        
+        <div class="join-content-container">
+            <form method="get" action="thankyou.html" class="chamber-form">
+                <fieldset>
+                    <legend>Applicant Information</legend>
+
+                    <label class="top">First Name*
+                        <input type="text" id="fname" name="fname" title="Applicant's First Name" required autocomplete="given-name">
+                    </label>
+
+                    <label class="top">Last Name*
+                        <input type="text" id="lname" name="lname" title="Applicant's Last Name" required autocomplete="family-name">
+                    </label>
+
+                    <label class="top">Organizational Title
+                        <input type="text" id="orgtitle" name="orgtitle" title="Applicant's Organizational Title (Min 7 Alpha chars/hyphens/spaces)" autocomplete="organization-title" 
+                            pattern="[A-Za-z\s\-]{7,}" placeholder="e.g., General Manager">
+                    </label>
+
+                    <label class="top">Email*
+                        <input type="email" id="email" name="email" title="Applicant's Email Address" required autocomplete="email" placeholder="example@business.com">
+                    </label>
+
+                    <label class="top">Mobile Phone*
+                        <input type="tel" id="phone" name="phone" title="Applicant's Mobile Phone Number" required autocomplete="tel">
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Business Information</legend>
+
+                    <label class="top">Business/Organization Name*
+                        <input type="text" id="orgname" name="orgname" title="Business or Organization Name" required autocomplete="organization">
+                    </label>
+
+                    <label class="top" for="membership-level">Select Membership Level</label>
+                    <select id="membership-level" name="membership-level" title="Select a Membership Level">
+                        <option value="" disabled selected>Select a Level</option>
+                        <option value="np">NP Membership (Non-profit, No fee)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+
+                    <label class="top">Business Description
+                        <textarea id="description" name="description" title="Business Description or Mission"></textarea>
+                    </label>
+                </fieldset>
+
+                <input type="hidden" id="timestamp" name="timestamp">
+
+                <input type="submit" value="Join the Chamber" class="submit-button">
+            </form>
+
+            <section class="membership-cards">
+                <h3>Membership Options</h3>
+                <div class="card-grid">
+                    <div class="mem-card card-1">
+                        <h4>NP Membership</h4>
+                        <p>No Fee</p>
+                        <a href="#modal-np" class="modal-link">Learn Benefits</a>
+                    </div>
+                    <div class="mem-card card-2">
+                        <h4>Bronze Membership</h4>
+                        <p>$50/mo</p>
+                        <a href="#modal-bronze" class="modal-link">Learn Benefits</a>
+                    </div>
+                    <div class="mem-card card-3">
+                        <h4>Silver Membership</h4>
+                        <p>$100/mo</p>
+                        <a href="#modal-silver" class="modal-link">Learn Benefits</a>
+                    </div>
+                    <div class="mem-card card-4">
+                        <h4>Gold Membership</h4>
+                        <p>$250/mo</p>
+                        <a href="#modal-gold" class="modal-link">Learn Benefits</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="modal-np" class="modal">
+        <div class="modal-content">
+            <a href="#" class="modal-close">&times;</a>
+            <h3>NP Membership Benefits</h3>
+            <p>Designed for non-profit organizations. Includes access to basic networking events and email newsletters.</p>
+        </div>
+    </div>
+    <div id="modal-bronze" class="modal">
+        <div class="modal-content">
+            <a href="#" class="modal-close">&times;</a>
+            <h3>Bronze Membership Benefits</h3>
+            <p>Includes NP benefits plus event discounts and a basic directory listing.</p>
+        </div>
+    </div>
+    <div id="modal-silver" class="modal">
+        <div class="modal-content">
+            <a href="#" class="modal-close">&times;</a>
+            <h3>Silver Membership Benefits</h3>
+            <p>Includes Bronze benefits plus eligibility for business training, enhanced directory listing, and a mention in the monthly newsletter.</p>
+        </div>
+    </div>
+    <div id="modal-gold" class="modal">
+        <div class="modal-content">
+            <a href="#" class="modal-close">&times;</a>
+            <h3>Gold Membership Benefits</h3>
+            <p>Includes Silver benefits plus premium directory spotlight positions, free access to all training workshops, and a featured sponsorship opportunity at one major event.</p>
+        </div>
+    </div>
+
+
+    <footer>
+        </footer>
+
+    <script src="scripts/main.js"></script>
+    <script>
+        // Set the hidden timestamp field when the page loads
+        document.getElementById('timestamp').value = new Date().toISOString();
+    </script>
+</body>
+</html>
