@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Farm Dashboard - Site Plan</title>
+
+    <style>
+        /* CSS for the Site Plan Document */
+
+        /* --- COLOR SCHEME DEFINITION --- */
+        :root {
+            --color-primary: #388E3C;   /* Deep Green (Used for Headings, Main Accent) */
+            --color-secondary: #FF9800; /* Orange (Used for Buttons, Alerts, Accents) */
+            --color-background: #F4F7F6;/* Light Gray/Off-White (Used for Body Background) */
+            --color-text: #333333;      /* Dark Gray (Used for Body Text) */
+            --color-light: #FFFFFF;     /* White (Used for Card Backgrounds, Text on Dark BG) */
+        }
+
+        /* --- TYPOGRAPHY DEFINITION --- */
+        /* Note: Using Google Fonts or standard system fonts is acceptable for class purposes */
+        /* Primary Font (Headings) - Bold and clear */
+        .font-heading {
+            font-family: 'Georgia', serif; 
+        }
+        /* Secondary Font (Body/Text) - Highly readable */
+        .font-body {
+            font-family: 'Arial', sans-serif;
+        }
+
+
+        /* --- GENERAL STYLING FOR SITE PLAN DOCUMENT --- */
+        body {
+            /* Applied: Background Color, Body Text Font/Color */
+            background-color: var(--color-background);
+            color: var(--color-text);
+            font-family: 'Arial', sans-serif; /* Using the defined body font */
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header, section {
+            background-color: var(--color-light); /* White background for sections */
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            /* Applied: Primary Color, Heading Font */
+            color: var(--color-primary);
+            font-family: 'Georgia', serif; /* Using the defined heading font */
+            text-align: center;
+        }
+
+        h2 {
+            /* Applied: Primary Color, Heading Font */
+            color: var(--color-primary);
+            font-family: 'Georgia', serif;
+            border-bottom: 2px solid var(--color-primary);
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+
+        /* Styling for Scenarios list */
+        .scenarios-list, .color-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .scenarios-list li::before {
+            content: "❓";
+            margin-right: 10px;
+        }
+        
+        /* Styling for Color Scheme examples */
+        .color-example {
+            display: inline-block;
+            width: 80px;
+            height: 30px;
+            border: 1px solid var(--color-text);
+            vertical-align: middle;
+            margin-right: 10px;
+            border-radius: 4px;
+        }
+        
+        /* Specific Color Applications */
+        .primary-bg { background-color: var(--color-primary); }
+        .secondary-bg { background-color: var(--color-secondary); }
+        .background-bg { background-color: var(--color-background); }
+        .text-color { color: var(--color-text); }
+        .light-bg { background-color: var(--color-light); }
+
+        /* Wireframe Styling */
+        .wireframe-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .wireframe {
+            border: 2px dashed var(--color-secondary);
+            padding: 15px;
+            border-radius: 5px;
+            background-color: var(--color-background);
+        }
+        
+        /* Mobile View Wireframe */
+        .wireframe.mobile {
+            width: 300px;
+            margin: 0 auto;
+        }
+        
+        /* Desktop View Wireframe (Uses Flexbox for two-column layout) */
+        .wireframe.desktop {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 10px;
+            height: 400px;
+        }
+        .wf-header {
+            background-color: #aaa;
+            padding: 10px;
+            text-align: center;
+            grid-column: 1 / -1;
+        }
+        .wf-side {
+            background-color: #ccc;
+            padding: 10px;
+        }
+        .wf-main {
+            background-color: #eee;
+            padding: 10px;
+        }
+        .wf-block {
+            border: 1px solid #777;
+            background-color: #ddd;
+            height: 70px;
+            margin-bottom: 8px;
+            text-align: center;
+            line-height: 70px;
+        }
+        .wf-block-tall {
+            height: 150px;
+        }
+
+        /* Mobile specific adjustments for wireframe visibility */
+        @media (min-width: 768px) {
+            .wireframe-container {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            .wireframe.mobile {
+                margin: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Smart Farm Dashboard: Project Site Plan</h1>
+        <p>This plan serves as the blueprint for the dynamic web application designed for small-scale farm management.</p>
+    </header>
+    
+    <section id="site-name">
+        <h2>Site Name</h2>
+        <p><strong>Proposed Name:</strong> **Agri-Data Hub**</p>
+        <p><strong>Reason Selected:</strong> The name is short, professional, and directly communicates the site's function—providing **(Agri)cultural** information in a centralized **(Data) Dashboard**. It suggests a focus on measurable data, which aligns with the use of APIs and dynamic content.</p>
+    </section>
+
+    <section id="site-purpose">
+        <h2>Site Purpose</h2>
+        <p>The **Agri-Data Hub** will provide small-scale farmers and advanced gardeners with an accessible, single-page dashboard for location-specific environmental planning. Its primary function is to:</p>
+        <ol>
+            <li>**Retrieve and Display** real-time and forecast weather data based on the user's geographic location (using the Geolocation API and a Remote Weather API).</li>
+            <li>**Provide Actionable Alerts** based on fetched data (e.g., frost warnings, high heat, irrigation suggestions).</li>
+            <li>**Facilitate Basic Record-Keeping** by allowing users to save and view key farm coordinates and potentially track basic crop status using local storage.</li>
+        </ol>
+    </section>
+
+    <section id="scenarios">
+        <h2>Target Audience Scenarios</h2>
+        <p>The target audience is the **small-scale farmer** or **serious hobby gardener** who needs quick, location-specific data to make timely decisions about crop care.</p>
+        
+        <ul class="scenarios-list">
+            <li>**Scenario 1:** "I'm planning to fertilize my vegetable patch tomorrow. **Will there be heavy rain that could wash away the fertilizer?**" (The site should answer this by clearly displaying the next 24-48 hour rain probability from the Weather Forecast section).</li>
+            <li>**Scenario 2:** "I noticed a temperature drop overnight. **What was the lowest temperature recorded at my farm location, and do I need to worry about frost damage tonight?**" (The site should answer this by providing the current temperature and issuing a clear, bold **Actionable Alert** if conditions are critical, possibly using the Secondary/Accent color).</li>
+        </ul>
+    </section>
+    
+    <section id="color-scheme">
+        <h2>Color Scheme</h2>
+        <p>The scheme uses natural, grounded colors to reflect the agricultural theme, while using a bright accent color for urgency and key actions.</p>
+        
+        <ul class="color-list">
+            <li><span class="color-example primary-bg"></span> **Primary Color ($\text{#388E3C}$): Deep Green**
+                <ul>
+                    <li>**Usage:** Main Headings (`h1`, `h2`), Header Background, Navigation Links/Hovers, Key Section Borders.</li>
+                    <li>**Purpose:** Represents growth, nature, and stability.</li>
+                </ul>
+            </li>
+            <li><span class="color-example secondary-bg"></span> **Secondary/Accent Color ($\text{#FF9800}$): Orange**
+                <ul>
+                    <li>**Usage:** Action Buttons (`Use Current Location`), Alert Backgrounds/Text (e.g., Frost Warning), Interactive Elements.</li>
+                    <li>**Purpose:** Draws attention to interactive items, warnings, and urgent information.</li>
+                </ul>
+            </li>
+            <li><span class="color-example background-bg"></span> **Background Color ($\text{#F4F7F6}$): Light Gray/Off-White**
+                <ul>
+                    <li>**Usage:** Entire `body` background.</li>
+                    <li>**Purpose:** Provides a clean, low-contrast backdrop for data readability.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="typography">
+        <h2>Typography</h2>
+        <p>Two font families are selected for optimum readability and distinction between structural elements.</p>
+        
+        <ul>
+            <li>**Heading Font (Structural):** **Georgia** (Serif)
+                <ul>
+                    <li>**Usage:** All headings (`h1`, `h2`).</li>
+                    <li>**Purpose:** Provides a classic, strong, and distinguished look for section titles.</li>
+                </ul>
+            </li>
+            <li>**Body Font (Readability):** **Arial** (Sans-Serif)
+                <ul>
+                    <li>**Usage:** All body text, paragraph content, dynamic data displays.</li>
+                    <li>**Purpose:** Highly legible and clean for data-heavy dashboard content.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section id="wireframe">
+        <h2>Wireframe Layouts</h2>
+        <p>The home page will be the single dashboard view, providing immediate access to all data.</p>
+        
+        <div class="wireframe-container">
+            
+            <div class="wireframe mobile">
+                <p>Mobile View (Max-Width 768px)</p>
+                <div class="wf-header">Header/Site Title & Hamburger Menu</div>
+                
+                <div class="wf-block" style="background-color: #FF9800; color: white;">🚨 Actionable Alerts (Top Priority)</div>
+                
+                <div class="wf-block">📍 Location/Saved Coordinates</div>
+                <div class="wf-block wf-block-tall">☀️ Weather Data Block (Large)</div>
+                <div class="wf-block">Data Chart/Table Placeholder</div>
+                
+                <div class="wf-header" style="background-color: #aaa; font-size: 0.8em;">Footer/Copyright</div>
+            </div>
+
+            <div class="wireframe desktop">
+                <p>Desktop/Tablet View (Min-Width 768px)</p>
+                <div class="wf-header">Header/Site Title & Horizontal Navigation Bar</div>
+                
+                <div class="wf-side" style="grid-row: 2 / span 2;">
+                    <div class="wf-block" style="background-color: #FF9800; color: white;">🚨 Actionable Alerts</div>
+                    <div class="wf-block">📍 Location/Saved Data</div>
+                    <div class="wf-block">Custom Links/Tools</div>
+                </div>
+
+                <div class="wf-main" style="grid-row: 2 / span 2;">
+                    <div class="wf-block wf-block-tall">☀️ Main Weather Forecast (Dynamic API Data)</div>
+                    <div class="wf-block">Crop/Field Tracking Table</div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+</body>
+</html>
