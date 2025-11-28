@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory | Cross River Chamber of Commerce</title>
+    <meta name="description" content="Official directory of members for the Cross River Chamber of Commerce.">
+    <meta name="author" content="Your Full Name">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="Directory | Cross River Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yourwebsite.com/chamber/images/social-share-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com/chamber/directory.html">
+    <meta property="og:description" content="Official directory of members for the Cross River Chamber of Commerce, Nigeria.">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/discover.css">
+    <link rel="stylesheet" href="styles/cover.css">
+    
+
+    
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <img src="images/crscoc.png" alt="Otu Godwin profile" width="200" height="100">
+            <span class="logo-icon">C</span>
+            <h1>Cross River Chamber of Commerce</h1>
+        </div>
+      <nav>
+            <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+
+    <div class="date-header">
+            <span id="current-date"></span>
+        </div>
+
+
+        <div class="dark-mode-toggle">
+             <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+
+    </header>
+
+    <main class="directory-main">
+        <h2>Member Directory</h2>
+
+       
+        
+        <div class="view-toggle">
+            <button id="grid-view" title="Toggle Grid View">Grid View</button>
+            <button id="list-view" title="Toggle List View">List View</button>
+        </div>
+
+       
+        <section class="hero-container">
+            <picture>
+                <source media="(min-width: 1000px)" srcset="images/sahara.png">
+                <source media="(min-width: 600px)" srcset="images/sahara.png">
+                <img src="images/sahara.png" alt="City skyline at sunset, representing business community" class="hero-image">
+            </picture>
+            <div class="hero-text">
+                <h2>Welcome to Our Community</h2>
+                <a href="join.html" class="cta-button">Join the Chamber Today!</a>
+            </div>
+        </section>
+
+        <section class="events-section card">
+            <h2>Current Event: Annual Gala</h2>
+            <p>Don't miss our annual business gala on **November 30th** at the Grand Convention Center. Network with hundreds of local business leaders.</p>
+            <a href="#">Register Here</a>
+        </section>
+
+        
+
+        <section id="location-section">
+            <h2>📍 Chamber Location</h2>
+            <p id="current-location">Location not set.</p>
+            <button id="get-location-btn">Use Current Location</button>
+        </section>
+
+
+        <section id="weather-section">
+            <h2>☀️ Weather Forecast</h2>
+            <div id="weather-data">
+                <p>Loading weather data...</p>
+                </div>
+        </section>
+
+         <section class="spotlights-section">
+            <h2>Member Spotlights</h2>
+            <div id="spotlights-container">
+                <p>Loading member spotlights...</p>
+                </div>
+        </section>
+
+         <main class="discover-main">
+        <div id="visitor-message" class="visitor-message-banner">
+            </div>
+
+        <h2>Discover Cross River: History, Culture, and Commerce</h2>
+        
+        <section id="item-gallery">
+            </section>
+            
+
+
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <h3>Cross River Chamber of Commerce</h3>
+            <p>4 Allman Street, Calabar</p>
+            <p>Cross River State</p>
+            <p>Email: <a href="otuotu020@gmail.com">otuotu020@gmail.com</a></p>
+            <p>Phone: (+234) 8164033261</p>
+        </div>
+
+        <div class="footer-social">
+            <a href="#" aria-label="YouTube"><img src="images/youtube.png" alt="YouTube Icon"></a>
+            <a href="#" aria-label="Twitter"><img src="images/twitter.png" alt="Twitter Icon"></a>
+            <a href="#" aria-label="LinkedIn"><img src="images/linkedinn.png" alt="LinkedIn Icon"></a>
+        </div>
+
+        <div class="footer-dev-info">
+            <p>WDD 231 Class Project</p>
+            <p>**Otu Godwin Otu**</p>
+            <p>&copy;<span id="current-year"></span> Cross River Chamber of Commerce</p>
+            <p>Last Modification: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/spotlights.js"></script>
+    <script src="scripts/cover.js"></script>
+    <script type="module" src="scripts/discover.js"></script>
+    
+</body>
+</html>
+

@@ -1,0 +1,127 @@
+/* --- ... (Existing CSS: Variables, Header, Navigation, Footer, etc.) ... --- */
+
+/* --- DISCOVER PAGE STYLES --- */
+
+/* Visitor Message Banner */
+.visitor-message-banner {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 0.75rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Base Card Styling */
+.discover-card {
+    background-color: var(--card-background);
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    padding: 1rem;
+    border-radius: 8px;
+    /* Ensure image and description columns work within the card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.discover-card h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.discover-card figure {
+    margin: 0;
+    overflow: hidden; /* Important for the hover effect */
+}
+
+.discover-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+    /* Transition for hover effect */
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.discover-card .learn-more {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+
+/*
+====================================
+CSS GRID LAYOUTS USING NAMED AREAS
+====================================
+*/
+
+/* --- 1. Small Screen Layout (320px - 640px) --- */
+#item-gallery {
+    display: grid;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+    
+    /* Define 8 rows, one for each card */
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+}
+
+/* Assign areas to cards */
+#item-gallery > div:nth-child(1) { grid-area: card1; }
+#item-gallery > div:nth-child(2) { grid-area: card2; }
+#item-gallery > div:nth-child(3) { grid-area: card3; }
+#item-gallery > div:nth-child(4) { grid-area: card4; }
+#item-gallery > div:nth-child(5) { grid-area: card5; }
+#item-gallery > div:nth-child(6) { grid-area: card6; }
+#item-gallery > div:nth-child(7) { grid-area: card7; }
+#item-gallery > div:nth-child(8) { grid-area: card8; }
+
+
+/* --- 2. Medium Screen Layout (641px - 1024px) --- */
+@media (min-width: 641px) {
+    #item-gallery {
+        /* 2-column layout */
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
+
+    /* Enable Image Hover Effect on Medium/Larger Screens */
+    .discover-card img:hover {
+        transform: scale(1.05); /* Zoom in */
+        filter: brightness(0.8) grayscale(0.2); /* Slightly darker and desaturated */
+    }
+}
+
+
+/* --- 3. Large Screen Layout (1025px and above) --- */
+@media (min-width: 1025px) {
+    #item-gallery {
+        /* 4-column layout */
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8"; /* 2 rows of 4 cards */
+    }
+}
