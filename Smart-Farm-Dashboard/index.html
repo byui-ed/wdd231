@@ -3,39 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Farm Dashboard</title>
+    <title>Agri-Data Hub | Farm Dashboard</title>
+    <meta name="description" content="Real-time, location-based weather data and crop management alerts for small farms and gardens.">
+    <meta name="author" content="AI Assistant">
+    <link rel="icon" href="images/favicon.ico">
+    <meta property="og:title" content="Agri-Data Hub | Dashboard">
+    <meta property="og:type" content="website">
+
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
     <header>
-        <h1>🌾 Farm Data Center</h1>
+        <div class="header-content">
+            <h1>🌾 Agri-Data Hub</h1>
+            <button class="hamburger" id="menu-toggle" aria-controls="main-nav" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+        
+        <nav id="main-nav" aria-label="Main Dashboard Navigation">
+            <ul>
+                <li><a href="index.html" class="active">Dashboard</a></li>
+                <li><a href="soil-guide.html">Soil Guide</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
+        <div id="alert-modal" class="modal" aria-modal="true" aria-hidden="true" role="dialog">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <h3 id="modal-title">Alert</h3>
+                <p id="modal-body">This is a dynamic modal alert.</p>
+            </div>
+        </div>
+
         <section id="location-section">
-            <h2>📍 Farm Location</h2>
+            <h2>📍 Farm Location (Local Storage Demo)</h2>
             <p id="current-location">Location not set.</p>
             <button id="get-location-btn">Use Current Location</button>
         </section>
 
         <section id="weather-section">
-            <h2>☀️ Weather Forecast</h2>
+            <h2>☀️ Weather Forecast (API Fetch Demo)</h2>
             <div id="weather-data">
                 <p>Loading weather data...</p>
-                </div>
+            </div>
         </section>
 
-        <section id="alert-section">
-            <h2>🚨 Alerts</h2>
+        <section class="hero-container">
+            <picture>
+                <source media="(min-width: 1000px)" srcset="images/rainbow.png">
+                <source media="(min-width: 600px)" srcset="images/rainbow.png">
+                <img src="images/rainbow.png" alt="City skyline at sunset, representing business community" class="hero-image">
+            </picture>
+        </section>
+
+
+        
+        <section id="alert-section" class="full-width">
+            <h2>🚨 General Alerts</h2>
             <div id="alerts">No immediate alerts.</div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Smart Farming Solutions</p>
+        <p>&copy; 2025 Agri-Data Hub | <span id="visit-counter"></span></p>
+        <p><a href="attributions.html">Attributions</a> | <a href="https://youtu.be/LegXdeziWKo" target="_blank">Video Demonstration</a></p>
     </footer>
 
-    <script src="scripts/script.js"></script>
+    <script type="module">
+        import { initializeDashboard } from './scripts/main.js';
+        initializeDashboard();
+    </script>
 </body>
 </html>

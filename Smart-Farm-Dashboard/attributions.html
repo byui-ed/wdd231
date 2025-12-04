@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Agri-Data Hub | Resources & Attributions</title>
+    <meta name="description" content="Sources and resource acknowledgements for the Agri-Data Hub project, including data and image references.">
+    <meta name="author" content="AI Assistant">
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="styles/style.css">
+
+    <style>
+        /* Small override to ensure the navigation link for this page can be highlighted if needed,
+           though typically resource pages are not part of the main navigation. */
+        #main-nav .attributions-link a {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>🌾 Agri-Data Hub</h1>
+            <button class="hamburger" id="menu-toggle" aria-controls="main-nav" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+        
+        <nav id="main-nav" aria-label="Auxiliary Site Navigation">
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="soil-guide.html">Soil Guide</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>📚 Project Attributions and Sources</h2>
+            <p>This page acknowledges the external resources, data, and assets used in the development of the Agri-Data Hub website, in accordance with the project requirements.</p>
+
+            <h3>Data Sources</h3>
+            <ul>
+                <li>**Soil Data (`script/data/soil-data.json`):** Data characteristics (pH ranges, crop suitability) were compiled and simulated based on general agricultural science resources (e.g., USDA Soil Health Guide).</li>
+                <li>**Weather Data Simulation:** Conceptual data structure based on publicly available documentation for OpenWeatherMap and similar APIs.</li>
+            </ul>
+
+            <h3>Visual Assets and Icons</h3>
+            <ul>
+                <li>**Farm Icon (🌾):** Used standard emoji set for the site logo.</li>
+                <li>**Favicon (`images/favicon.ico`):** Placeholder icon generated from a free online favicon generator.</li>
+                <li>**General Images (If used in the final project):** All production images would be sourced from royalty-free image repositories (e.g., Unsplash, Pexels) and credited here.</li>
+            </ul>
+
+            <h3>Code and Accessibility Standards</h3>
+            <ul>
+                <li>**HTML and CSS Standards:** Developed adhering to specifications from MDN Web Docs and W3C.</li>
+                <li>**Accessibility (ARIA):** ARIA roles and attributes implemented based on WAI-ARIA Authoring Practices.</li>
+            </ul>
+            
+            <p style="margin-top: 30px;"><a href="index.html">← Return to Dashboard</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Agri-Data Hub | <span id="visit-counter"></span></p>
+        <p><a href="attributions.html">Attributions</a> | <a href="#" target="_blank">Video Demonstration</a></p>
+    </footer>
+
+    <script type="module">
+        import { initializeDashboard } from './scripts/main.js';
+        initializeDashboard();
+        
+        // Custom logic to ensure the footer counter works on this page
+        if (document.getElementById('visit-counter')) {
+            let visitCount = localStorage.getItem('siteVisits') || 0;
+            document.getElementById('visit-counter').textContent = `| Site Views: ${visitCount}`;
+        }
+    </script>
+</body>
+</html>

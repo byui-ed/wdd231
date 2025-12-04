@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri-Data Hub | Soil & Crop Guide</title>
+    <meta name="description" content="Detailed guide and characteristics of soil types and common crops using dynamic fetched data.">
+    <meta name="author" content="AI Assistant">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>🌾 Agri-Data Hub</h1>
+            <button class="hamburger" id="menu-toggle" aria-controls="main-nav" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+        
+        <nav id="main-nav" aria-label="Main Dashboard Navigation">
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="soil-guide.html" class="active">Soil Guide</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>🌱 Soil and Crop Characteristics (15+ Items)</h2>
+            <p>This data is loaded dynamically from a local JSON file using the **Fetch API** and processed with **Array Methods**.</p>
+            <div id="soil-data-container" class="data-grid">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Agri-Data Hub | <span id="visit-counter"></span></p>
+        <p><a href="attributions.html">Attributions</a> | <a href="#" target="_blank">Video Demonstration</a></p>
+    </footer>
+
+    <script type="module">
+        import { initializeDashboard } from './scripts/main.js';
+        import { loadSoilData } from './scripts/soil-guide.js';
+        
+        initializeDashboard();
+        loadSoilData();
+    </script>
+</body>
+</html>

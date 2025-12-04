@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "name": "Loam Soil",
+        "ph_range": "6.0-7.5",
+        "best_crop": "Tomatoes, Corn",
+        "drainage": "Excellent",
+        "texture": "Balanced",
+        "water_retention": "Medium"
+    },
+    {
+        "id": 2,
+        "name": "Clay Soil",
+        "ph_range": "5.5-7.0",
+        "best_crop": "Broccoli, Cabbage",
+        "drainage": "Poor",
+        "texture": "Fine",
+        "water_retention": "High"
+    },
+    {
+        "id": 3,
+        "name": "Sand Soil",
+        "ph_range": "5.0-8.5",
+        "best_crop": "Carrots, Peppers",
+        "drainage": "Very Fast",
+        "texture": "Gritty",
+        "water_retention": "Low"
+    },
+    {
+        "id": 4,
+        "name": "Silt Soil",
+        "ph_range": "6.5-7.5",
+        "best_crop": "Lettuce, Beans",
+        "drainage": "Slow",
+        "texture": "Smooth",
+        "water_retention": "High"
+    },
+    {
+        "id": 5,
+        "name": "Peat Soil",
+        "ph_range": "4.0-5.5",
+        "best_crop": "Berries, Rhubarb",
+        "drainage": "Variable",
+        "texture": "Spongy",
+        "water_retention": "High"
+    },
+    {
+        "id": 6,
+        "name": "Chalk Soil",
+        "ph_range": "7.5-8.5",
+        "best_crop": "Lilies, Lavender",
+        "drainage": "Fast",
+        "texture": "Stoney",
+        "water_retention": "Low"
+    },
+    {
+        "id": 7,
+        "name": "Acidic Loam",
+        "ph_range": "5.0-6.0",
+        "best_crop": "Potatoes, Blueberries",
+        "drainage": "Good",
+        "texture": "Balanced",
+        "water_retention": "Medium"
+    },
+    {
+        "id": 8,
+        "name": "Alkaline Clay",
+        "ph_range": "7.5-8.0",
+        "best_crop": "Asparagus, Olives",
+        "drainage": "Very Slow",
+        "texture": "Fine",
+        "water_retention": "High"
+    },
+    {
+        "id": 9,
+        "name": "Rocky Loam",
+        "ph_range": "6.0-7.0",
+        "best_crop": "Grapes, Herbs",
+        "drainage": "Fast",
+        "texture": "Mixed",
+        "water_retention": "Medium"
+    },
+    {
+        "id": 10,
+        "name": "Heavy Clay",
+        "ph_range": "6.0-7.0",
+        "best_crop": "Ornamentals",
+        "drainage": "Very Poor",
+        "texture": "Dense",
+        "water_retention": "Very High"
+    },
+    {
+        "id": 11,
+        "name": "Fine Sand",
+        "ph_range": "5.5-7.5",
+        "best_crop": "Melons, Squashes",
+        "drainage": "Very Fast",
+        "texture": "Soft Gritty",
+        "water_retention": "Very Low"
+    },
+    {
+        "id": 12,
+        "name": "Organic Silt",
+        "ph_range": "6.0-7.0",
+        "best_crop": "Rice, Aquatic Plants",
+        "drainage": "Controlled",
+        "texture": "Very Smooth",
+        "water_retention": "High"
+    },
+    {
+        "id": 13,
+        "name": "Calcareous Soil",
+        "ph_range": "7.8-8.5",
+        "best_crop": "Almonds, Pistachios",
+        "drainage": "Good",
+        "texture": "Stiff",
+        "water_retention": "Low"
+    },
+    {
+        "id": 14,
+        "name": "Volcanic Soil",
+        "ph_range": "5.5-6.5",
+        "best_crop": "Coffee, Bananas",
+        "drainage": "Excellent",
+        "texture": "Porous",
+        "water_retention": "Medium"
+    },
+    {
+        "id": 15,
+        "name": "Coastal Sand",
+        "ph_range": "7.0-8.5",
+        "best_crop": "Succulents, Dune Grass",
+        "drainage": "Very Fast",
+        "texture": "Coarse",
+        "water_retention": "Very Low"
+    },
+    {
+        "id": 16,
+        "name": "Humus Rich",
+        "ph_range": "6.0-7.0",
+        "best_crop": "General Vegetables",
+        "drainage": "Balanced",
+        "texture": "Dark Loam",
+        "water_retention": "High"
+    }
+]

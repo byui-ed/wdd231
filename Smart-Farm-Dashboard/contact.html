@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri-Data Hub | Contact Us</title>
+    <meta name="description" content="Contact the Agri-Data Hub development team for support, feedback, or feature requests.">
+    <meta name="author" content="AI Assistant">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>🌾 Agri-Data Hub</h1>
+            <button class="hamburger" id="menu-toggle" aria-controls="main-nav" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+        
+        <nav id="main-nav" aria-label="Main Dashboard Navigation">
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="soil-guide.html">Soil Guide</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>📞 Contact Our Team (HTML Form Demo)</h2>
+            <form method="get" action="confirmation.html">
+                <label for="name">Full Name*:</label>
+                <input type="text" id="name" name="fullName" required>
+
+                <label for="email">Email Address*:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="inquiry">Type of Inquiry*:</label>
+                <select id="inquiry" name="inquiryType" required>
+                    <option value="">Select...</option>
+                    <option value="support">Technical Support</option>
+                    <option value="data">Data Feedback</option>
+                    <option value="feature">Feature Request</option>
+                </select>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="userMessage" rows="5"></textarea>
+
+                <button type="submit">Send Inquiry</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Agri-Data Hub | <span id="visit-counter"></span></p>
+        <p><a href="attributions.html">Attributions</a> | <a href="#" target="_blank">Video Demonstration</a></p>
+    </footer>
+
+    <script type="module">
+        import { initializeDashboard } from './scripts/main.js';
+        initializeDashboard();
+    </script>
+</body>
+</html>
